@@ -1,5 +1,14 @@
-const removeFromArray = function() {
+const removeFromArray = function(arr, ...args) {
+    for (let i = 0; i < arr.length; i++) {
+        if (args == arr[i]) {
+            arr.splice(i, 1);
+        }
+    }
+    return arr;
 };
+
+console.log(removeFromArray([1, 2, 3, 4], 3));
 
 // Do not edit below this line
 module.exports = removeFromArray;
+
